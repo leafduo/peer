@@ -1,0 +1,3 @@
+[submodule "Vendor/XMPPFramework"]
+	path = Vendor/XMPPFramework
+	url = git://github.com/robbiehanson/XMPPFramework.git
