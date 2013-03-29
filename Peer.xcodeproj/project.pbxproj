@@ -73,6 +73,7 @@
 		9217D7ED1705C7AD0021039B /* SSManagedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7E01705C7AD0021039B /* SSManagedViewController.m */; };
 		9217D7EE1705C7AD0021039B /* SSRemoteManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7E21705C7AD0021039B /* SSRemoteManagedObject.m */; };
 		9217D7EF1705C7AD0021039B /* SSDataKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9217D7E31705C7AD0021039B /* SSDataKit.podspec */; };
+		9217D7F21705C9470021039B /* PRXMPPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7F11705C9470021039B /* PRXMPPSession.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -201,6 +202,8 @@
 		9217D7E11705C7AD0021039B /* SSRemoteManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSRemoteManagedObject.h; sourceTree = "<group>"; };
 		9217D7E21705C7AD0021039B /* SSRemoteManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSRemoteManagedObject.m; sourceTree = "<group>"; };
 		9217D7E31705C7AD0021039B /* SSDataKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SSDataKit.podspec; sourceTree = "<group>"; };
+		9217D7F01705C9470021039B /* PRXMPPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRXMPPSession.h; sourceTree = "<group>"; };
+		9217D7F11705C9470021039B /* PRXMPPSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRXMPPSession.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +263,8 @@
 				9217D62C1705747C0021039B /* PRAppDelegate.h */,
 				9217D62D1705747C0021039B /* PRAppDelegate.m */,
 				9217D6351705747C0021039B /* MainStoryboard.storyboard */,
+				9217D7F01705C9470021039B /* PRXMPPSession.h */,
+				9217D7F11705C9470021039B /* PRXMPPSession.m */,
 				9217D63B1705747C0021039B /* PRMasterViewController.h */,
 				9217D63C1705747C0021039B /* PRMasterViewController.m */,
 				9217D63E1705747C0021039B /* PRDetailViewController.h */,
@@ -681,6 +686,7 @@
 				9217D7EC1705C7AD0021039B /* SSManagedTableViewController.m in Sources */,
 				9217D7ED1705C7AD0021039B /* SSManagedViewController.m in Sources */,
 				9217D7EE1705C7AD0021039B /* SSRemoteManagedObject.m in Sources */,
+				9217D7F21705C9470021039B /* PRXMPPSession.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -815,6 +821,7 @@
 				9217D6451705747C0021039B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
