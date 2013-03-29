@@ -61,6 +61,18 @@
 		9217D6D1170579840021039B /* XMPPIDTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D6B9170579840021039B /* XMPPIDTracker.m */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations"; }; };
 		9217D6D2170579840021039B /* XMPPSRVResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D6BB170579840021039B /* XMPPSRVResolver.m */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations"; }; };
 		9217D6D6170579BC0021039B /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9217D6D4170579B30021039B /* libresolv.dylib */; };
+		9217D7E41705C7AD0021039B /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 9217D7CD1705C7AD0021039B /* LICENSE */; };
+		9217D7E51705C7AD0021039B /* Readme.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 9217D7CE1705C7AD0021039B /* Readme.markdown */; };
+		9217D7E61705C7AD0021039B /* NSManagedObjectContext+SSDataKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7D11705C7AD0021039B /* NSManagedObjectContext+SSDataKitAdditions.m */; };
+		9217D7E71705C7AD0021039B /* SSFilterableFetchedResultsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7D41705C7AD0021039B /* SSFilterableFetchedResultsController.m */; };
+		9217D7E81705C7AD0021039B /* SSFilteredResultsFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7D61705C7AD0021039B /* SSFilteredResultsFilter.m */; };
+		9217D7E91705C7AD0021039B /* SSFilteredResultsSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7D81705C7AD0021039B /* SSFilteredResultsSection.m */; };
+		9217D7EA1705C7AD0021039B /* SSManagedCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7DA1705C7AD0021039B /* SSManagedCollectionViewController.m */; };
+		9217D7EB1705C7AD0021039B /* SSManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7DC1705C7AD0021039B /* SSManagedObject.m */; };
+		9217D7EC1705C7AD0021039B /* SSManagedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7DE1705C7AD0021039B /* SSManagedTableViewController.m */; };
+		9217D7ED1705C7AD0021039B /* SSManagedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7E01705C7AD0021039B /* SSManagedViewController.m */; };
+		9217D7EE1705C7AD0021039B /* SSRemoteManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7E21705C7AD0021039B /* SSRemoteManagedObject.m */; };
+		9217D7EF1705C7AD0021039B /* SSDataKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9217D7E31705C7AD0021039B /* SSDataKit.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -167,6 +179,28 @@
 		9217D6BA170579840021039B /* XMPPSRVResolver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPSRVResolver.h; sourceTree = "<group>"; };
 		9217D6BB170579840021039B /* XMPPSRVResolver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPSRVResolver.m; sourceTree = "<group>"; };
 		9217D6D4170579B30021039B /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
+		9217D7CD1705C7AD0021039B /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		9217D7CE1705C7AD0021039B /* Readme.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Readme.markdown; sourceTree = "<group>"; };
+		9217D7D01705C7AD0021039B /* NSManagedObjectContext+SSDataKitAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+SSDataKitAdditions.h"; sourceTree = "<group>"; };
+		9217D7D11705C7AD0021039B /* NSManagedObjectContext+SSDataKitAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+SSDataKitAdditions.m"; sourceTree = "<group>"; };
+		9217D7D21705C7AD0021039B /* SSDataKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDataKit.h; sourceTree = "<group>"; };
+		9217D7D31705C7AD0021039B /* SSFilterableFetchedResultsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSFilterableFetchedResultsController.h; sourceTree = "<group>"; };
+		9217D7D41705C7AD0021039B /* SSFilterableFetchedResultsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSFilterableFetchedResultsController.m; sourceTree = "<group>"; };
+		9217D7D51705C7AD0021039B /* SSFilteredResultsFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSFilteredResultsFilter.h; sourceTree = "<group>"; };
+		9217D7D61705C7AD0021039B /* SSFilteredResultsFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSFilteredResultsFilter.m; sourceTree = "<group>"; };
+		9217D7D71705C7AD0021039B /* SSFilteredResultsSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSFilteredResultsSection.h; sourceTree = "<group>"; };
+		9217D7D81705C7AD0021039B /* SSFilteredResultsSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSFilteredResultsSection.m; sourceTree = "<group>"; };
+		9217D7D91705C7AD0021039B /* SSManagedCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSManagedCollectionViewController.h; sourceTree = "<group>"; };
+		9217D7DA1705C7AD0021039B /* SSManagedCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSManagedCollectionViewController.m; sourceTree = "<group>"; };
+		9217D7DB1705C7AD0021039B /* SSManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSManagedObject.h; sourceTree = "<group>"; };
+		9217D7DC1705C7AD0021039B /* SSManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSManagedObject.m; sourceTree = "<group>"; };
+		9217D7DD1705C7AD0021039B /* SSManagedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSManagedTableViewController.h; sourceTree = "<group>"; };
+		9217D7DE1705C7AD0021039B /* SSManagedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSManagedTableViewController.m; sourceTree = "<group>"; };
+		9217D7DF1705C7AD0021039B /* SSManagedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSManagedViewController.h; sourceTree = "<group>"; };
+		9217D7E01705C7AD0021039B /* SSManagedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSManagedViewController.m; sourceTree = "<group>"; };
+		9217D7E11705C7AD0021039B /* SSRemoteManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSRemoteManagedObject.h; sourceTree = "<group>"; };
+		9217D7E21705C7AD0021039B /* SSRemoteManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSRemoteManagedObject.m; sourceTree = "<group>"; };
+		9217D7E31705C7AD0021039B /* SSDataKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SSDataKit.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +318,7 @@
 		9217D65F170576E00021039B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				9217D7CC1705C7AD0021039B /* SSDataKit */,
 				9217D6D3170579910021039B /* XMPPFramework */,
 				9217D67E1705792C0021039B /* libidn */,
 				9217D6601705781A0021039B /* CocoaAsyncSocket */,
@@ -488,6 +523,44 @@
 			name = XMPPFramework;
 			sourceTree = "<group>";
 		};
+		9217D7CC1705C7AD0021039B /* SSDataKit */ = {
+			isa = PBXGroup;
+			children = (
+				9217D7CD1705C7AD0021039B /* LICENSE */,
+				9217D7CE1705C7AD0021039B /* Readme.markdown */,
+				9217D7CF1705C7AD0021039B /* SSDataKit */,
+				9217D7E31705C7AD0021039B /* SSDataKit.podspec */,
+			);
+			name = SSDataKit;
+			path = Vendor/SSDataKit;
+			sourceTree = "<group>";
+		};
+		9217D7CF1705C7AD0021039B /* SSDataKit */ = {
+			isa = PBXGroup;
+			children = (
+				9217D7D01705C7AD0021039B /* NSManagedObjectContext+SSDataKitAdditions.h */,
+				9217D7D11705C7AD0021039B /* NSManagedObjectContext+SSDataKitAdditions.m */,
+				9217D7D21705C7AD0021039B /* SSDataKit.h */,
+				9217D7D31705C7AD0021039B /* SSFilterableFetchedResultsController.h */,
+				9217D7D41705C7AD0021039B /* SSFilterableFetchedResultsController.m */,
+				9217D7D51705C7AD0021039B /* SSFilteredResultsFilter.h */,
+				9217D7D61705C7AD0021039B /* SSFilteredResultsFilter.m */,
+				9217D7D71705C7AD0021039B /* SSFilteredResultsSection.h */,
+				9217D7D81705C7AD0021039B /* SSFilteredResultsSection.m */,
+				9217D7D91705C7AD0021039B /* SSManagedCollectionViewController.h */,
+				9217D7DA1705C7AD0021039B /* SSManagedCollectionViewController.m */,
+				9217D7DB1705C7AD0021039B /* SSManagedObject.h */,
+				9217D7DC1705C7AD0021039B /* SSManagedObject.m */,
+				9217D7DD1705C7AD0021039B /* SSManagedTableViewController.h */,
+				9217D7DE1705C7AD0021039B /* SSManagedTableViewController.m */,
+				9217D7DF1705C7AD0021039B /* SSManagedViewController.h */,
+				9217D7E01705C7AD0021039B /* SSManagedViewController.m */,
+				9217D7E11705C7AD0021039B /* SSRemoteManagedObject.h */,
+				9217D7E21705C7AD0021039B /* SSRemoteManagedObject.m */,
+			);
+			path = SSDataKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -546,6 +619,9 @@
 				9217D6341705747C0021039B /* Default-568h@2x.png in Resources */,
 				9217D6371705747C0021039B /* MainStoryboard.storyboard in Resources */,
 				9217D65E170576D50021039B /* README.txt in Resources */,
+				9217D7E41705C7AD0021039B /* LICENSE in Resources */,
+				9217D7E51705C7AD0021039B /* Readme.markdown in Resources */,
+				9217D7EF1705C7AD0021039B /* SSDataKit.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +672,15 @@
 				9217D6D0170579840021039B /* RFImageToDataTransformer.m in Sources */,
 				9217D6D1170579840021039B /* XMPPIDTracker.m in Sources */,
 				9217D6D2170579840021039B /* XMPPSRVResolver.m in Sources */,
+				9217D7E61705C7AD0021039B /* NSManagedObjectContext+SSDataKitAdditions.m in Sources */,
+				9217D7E71705C7AD0021039B /* SSFilterableFetchedResultsController.m in Sources */,
+				9217D7E81705C7AD0021039B /* SSFilteredResultsFilter.m in Sources */,
+				9217D7E91705C7AD0021039B /* SSFilteredResultsSection.m in Sources */,
+				9217D7EA1705C7AD0021039B /* SSManagedCollectionViewController.m in Sources */,
+				9217D7EB1705C7AD0021039B /* SSManagedObject.m in Sources */,
+				9217D7EC1705C7AD0021039B /* SSManagedTableViewController.m in Sources */,
+				9217D7ED1705C7AD0021039B /* SSManagedViewController.m in Sources */,
+				9217D7EE1705C7AD0021039B /* SSRemoteManagedObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

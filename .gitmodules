@@ -1,3 +1,6 @@
 [submodule "Vendor/XMPPFramework"]
 	path = Vendor/XMPPFramework
 	url = git://github.com/robbiehanson/XMPPFramework.git
+[submodule "Vendor/SSDataKit"]
+	path = Vendor/SSDataKit
+	url = git://github.com/soffes/ssdatakit.git
