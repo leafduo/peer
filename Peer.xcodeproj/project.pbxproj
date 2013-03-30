@@ -74,6 +74,9 @@
 		9217D7EE1705C7AD0021039B /* SSRemoteManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7E21705C7AD0021039B /* SSRemoteManagedObject.m */; };
 		9217D7EF1705C7AD0021039B /* SSDataKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9217D7E31705C7AD0021039B /* SSDataKit.podspec */; };
 		9217D7F21705C9470021039B /* PRXMPPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7F11705C9470021039B /* PRXMPPSession.m */; };
+		9276FE6C170719880012A82E /* Buddy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE6B170719880012A82E /* Buddy.m */; };
+		9276FE6F170719890012A82E /* Presence.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE6E170719890012A82E /* Presence.m */; };
+		9276FE72170719890012A82E /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE71170719890012A82E /* Message.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -204,6 +207,12 @@
 		9217D7E31705C7AD0021039B /* SSDataKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SSDataKit.podspec; sourceTree = "<group>"; };
 		9217D7F01705C9470021039B /* PRXMPPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRXMPPSession.h; sourceTree = "<group>"; };
 		9217D7F11705C9470021039B /* PRXMPPSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRXMPPSession.m; sourceTree = "<group>"; };
+		9276FE6A170719880012A82E /* Buddy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buddy.h; sourceTree = "<group>"; };
+		9276FE6B170719880012A82E /* Buddy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buddy.m; sourceTree = "<group>"; };
+		9276FE6D170719890012A82E /* Presence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presence.h; sourceTree = "<group>"; };
+		9276FE6E170719890012A82E /* Presence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Presence.m; sourceTree = "<group>"; };
+		9276FE70170719890012A82E /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		9276FE71170719890012A82E /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,16 +269,11 @@
 		9217D6231705747C0021039B /* Peer */ = {
 			isa = PBXGroup;
 			children = (
+				9276FE75170719BA0012A82E /* View Controller */,
+				9276FE741707199C0012A82E /* XMPP */,
+				9276FE73170719910012A82E /* Model */,
 				9217D62C1705747C0021039B /* PRAppDelegate.h */,
 				9217D62D1705747C0021039B /* PRAppDelegate.m */,
-				9217D6351705747C0021039B /* MainStoryboard.storyboard */,
-				9217D7F01705C9470021039B /* PRXMPPSession.h */,
-				9217D7F11705C9470021039B /* PRXMPPSession.m */,
-				9217D63B1705747C0021039B /* PRMasterViewController.h */,
-				9217D63C1705747C0021039B /* PRMasterViewController.m */,
-				9217D63E1705747C0021039B /* PRDetailViewController.h */,
-				9217D63F1705747C0021039B /* PRDetailViewController.m */,
-				9217D6381705747C0021039B /* Peer.xcdatamodeld */,
 				9217D6241705747C0021039B /* Supporting Files */,
 			);
 			path = Peer;
@@ -566,6 +570,41 @@
 			path = SSDataKit;
 			sourceTree = "<group>";
 		};
+		9276FE73170719910012A82E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9217D6381705747C0021039B /* Peer.xcdatamodeld */,
+				9276FE70170719890012A82E /* Message.h */,
+				9276FE71170719890012A82E /* Message.m */,
+				9276FE6D170719890012A82E /* Presence.h */,
+				9276FE6E170719890012A82E /* Presence.m */,
+				9276FE6A170719880012A82E /* Buddy.h */,
+				9276FE6B170719880012A82E /* Buddy.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9276FE741707199C0012A82E /* XMPP */ = {
+			isa = PBXGroup;
+			children = (
+				9217D7F01705C9470021039B /* PRXMPPSession.h */,
+				9217D7F11705C9470021039B /* PRXMPPSession.m */,
+			);
+			name = XMPP;
+			sourceTree = "<group>";
+		};
+		9276FE75170719BA0012A82E /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9217D6351705747C0021039B /* MainStoryboard.storyboard */,
+				9217D63B1705747C0021039B /* PRMasterViewController.h */,
+				9217D63C1705747C0021039B /* PRMasterViewController.m */,
+				9217D63E1705747C0021039B /* PRDetailViewController.h */,
+				9217D63F1705747C0021039B /* PRDetailViewController.m */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -687,6 +726,9 @@
 				9217D7ED1705C7AD0021039B /* SSManagedViewController.m in Sources */,
 				9217D7EE1705C7AD0021039B /* SSRemoteManagedObject.m in Sources */,
 				9217D7F21705C9470021039B /* PRXMPPSession.m in Sources */,
+				9276FE6C170719880012A82E /* Buddy.m in Sources */,
+				9276FE6F170719890012A82E /* Presence.m in Sources */,
+				9276FE72170719890012A82E /* Message.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

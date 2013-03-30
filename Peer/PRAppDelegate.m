@@ -20,7 +20,7 @@
     // Override point for customization after application launch.
 //    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
 //    PRMasterViewController *controller = (PRMasterViewController *)navigationController.topViewController;
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+//    [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [PRXMPPSession sharedSession].jabberID = @"leafduo@gmail.com";
     [PRXMPPSession sharedSession].password = @"shluvumnbchjqmmk";
     [[PRXMPPSession sharedSession] connect];

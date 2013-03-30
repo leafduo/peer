@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Buddy" representedClassName="Buddy" syncable="YES">
+        <attribute name="jid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="show" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="resources" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Presence" inverseName="owner" inverseEntity="Presence" syncable="YES"/>
+        <relationship name="sent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="sender" inverseEntity="Message" syncable="YES"/>
+    </entity>
     <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date"/>
+        <attribute name="timeStamp" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <userInfo/>
+    </entity>
+    <entity name="Message" representedClassName="Message" syncable="YES">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="sender" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Buddy" inverseName="sent" inverseEntity="Buddy" syncable="YES"/>
+    </entity>
+    <entity name="Presence" representedClassName="Presence" syncable="YES">
+        <attribute name="jid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="show" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="owner" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Buddy" inverseName="resources" inverseEntity="Buddy" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Buddy" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Event" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Message" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Presence" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>
