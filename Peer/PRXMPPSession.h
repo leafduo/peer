@@ -16,5 +16,6 @@
 
 + (instancetype)sharedSession;
 - (void)connect;
+- (void)sendMessage:(NSString *)message toUser:(NSString *)user;
 
 @end

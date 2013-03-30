@@ -7,8 +7,8 @@
 //
 
 #import "PRBuddyListViewController.h"
+#import "PRChatViewController.h"
 
-#import "PRDetailViewController.h"
 #import "Buddy.h"
 
 @interface PRBuddyListViewController ()
@@ -108,10 +108,10 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:@"beginChat"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        [[segue destinationViewController] setDetailItem:object];
+        Buddy *buddy = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        [[segue destinationViewController] setBuddy:buddy];
     }
 }
 

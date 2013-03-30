@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9216862417075FEE00693493 /* PRChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9216862317075FEE00693493 /* PRChatViewController.m */; };
 		9217D61C1705747C0021039B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9217D61B1705747C0021039B /* UIKit.framework */; };
 		9217D61E1705747C0021039B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9217D61D1705747C0021039B /* Foundation.framework */; };
 		9217D6201705747C0021039B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9217D61F1705747C0021039B /* CoreGraphics.framework */; };
@@ -20,7 +21,6 @@
 		9217D6371705747C0021039B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9217D6351705747C0021039B /* MainStoryboard.storyboard */; };
 		9217D63A1705747C0021039B /* Peer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9217D6381705747C0021039B /* Peer.xcdatamodeld */; };
 		9217D63D1705747C0021039B /* PRBuddyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D63C1705747C0021039B /* PRBuddyListViewController.m */; };
-		9217D6401705747C0021039B /* PRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D63F1705747C0021039B /* PRDetailViewController.m */; };
 		9217D657170576D50021039B /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D648170576D50021039B /* DDAbstractDatabaseLogger.m */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations"; }; };
 		9217D658170576D50021039B /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D64A170576D50021039B /* DDASLLogger.m */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations"; }; };
 		9217D659170576D50021039B /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D64C170576D50021039B /* DDFileLogger.m */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations"; }; };
@@ -81,6 +81,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9216862217075FEE00693493 /* PRChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRChatViewController.h; sourceTree = "<group>"; };
+		9216862317075FEE00693493 /* PRChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRChatViewController.m; sourceTree = "<group>"; };
 		9217D6181705747C0021039B /* Peer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9217D61B1705747C0021039B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9217D61D1705747C0021039B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,8 +101,6 @@
 		9217D6391705747C0021039B /* Peer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Peer.xcdatamodel; sourceTree = "<group>"; };
 		9217D63B1705747C0021039B /* PRBuddyListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRBuddyListViewController.h; sourceTree = "<group>"; };
 		9217D63C1705747C0021039B /* PRBuddyListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRBuddyListViewController.m; sourceTree = "<group>"; };
-		9217D63E1705747C0021039B /* PRDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRDetailViewController.h; sourceTree = "<group>"; };
-		9217D63F1705747C0021039B /* PRDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRDetailViewController.m; sourceTree = "<group>"; };
 		9217D647170576D50021039B /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
 		9217D648170576D50021039B /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
 		9217D649170576D50021039B /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
@@ -604,8 +604,8 @@
 				9217D6351705747C0021039B /* MainStoryboard.storyboard */,
 				9217D63B1705747C0021039B /* PRBuddyListViewController.h */,
 				9217D63C1705747C0021039B /* PRBuddyListViewController.m */,
-				9217D63E1705747C0021039B /* PRDetailViewController.h */,
-				9217D63F1705747C0021039B /* PRDetailViewController.m */,
+				9216862217075FEE00693493 /* PRChatViewController.h */,
+				9216862317075FEE00693493 /* PRChatViewController.m */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -685,7 +685,6 @@
 				9217D62E1705747C0021039B /* PRAppDelegate.m in Sources */,
 				9217D63A1705747C0021039B /* Peer.xcdatamodeld in Sources */,
 				9217D63D1705747C0021039B /* PRBuddyListViewController.m in Sources */,
-				9217D6401705747C0021039B /* PRDetailViewController.m in Sources */,
 				9217D657170576D50021039B /* DDAbstractDatabaseLogger.m in Sources */,
 				9217D658170576D50021039B /* DDASLLogger.m in Sources */,
 				9217D659170576D50021039B /* DDFileLogger.m in Sources */,
@@ -735,6 +734,7 @@
 				9276FE6F170719890012A82E /* Presence.m in Sources */,
 				9276FE72170719890012A82E /* Message.m in Sources */,
 				9276FE7C170748A30012A82E /* PRManagedObject.m in Sources */,
+				9216862417075FEE00693493 /* PRChatViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
