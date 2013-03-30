@@ -12,16 +12,21 @@
 
 @implementation Presence
 
-@dynamic jid;
+@dynamic identifier;
 @dynamic show;
 @dynamic status;
 @dynamic owner;
 
 + (instancetype)objectWithXMLRepresentation:(XMPPPresence *)xmppPresence {
-    Presence *presence = [[Presence alloc] init];
-    presence.jid = xmppPresence.fromStr;
+    Presence *presence = [Presence objectWithIdentifier:xmppPresence.fromStr];
+    presence.identifier = xmppPresence.fromStr;
     presence.show = xmppPresence.show;
     presence.status = xmppPresence.status;
+
+    Buddy *associateBuddy = [Buddy objectWithIdentifier:xmppPresence.from.bare];
+    [associateBuddy addPresencesObject:presence];
+    [associateBuddy updateStatus];
+
     return presence;
 }
 

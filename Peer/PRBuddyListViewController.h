@@ -1,5 +1,5 @@
 //
-//  PRMasterViewController.h
+//  PRBuddyListViewController.h
 //  Peer
 //
 //  Created by leafduo on 3/29/13.
@@ -10,7 +10,7 @@
 
 #import <CoreData/CoreData.h>
 
-@interface PRMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface PRBuddyListViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 

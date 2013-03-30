@@ -1,21 +1,21 @@
 //
-//  PRMasterViewController.m
+//  PRBuddyListViewController.m
 //  Peer
 //
 //  Created by leafduo on 3/29/13.
 //  Copyright (c) 2013 leafduo.com. All rights reserved.
 //
 
-#import "PRMasterViewController.h"
+#import "PRBuddyListViewController.h"
 
 #import "PRDetailViewController.h"
-#import "Presence.h"
+#import "Buddy.h"
 
-@interface PRMasterViewController ()
+@interface PRBuddyListViewController ()
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 @end
 
-@implementation PRMasterViewController
+@implementation PRBuddyListViewController
 
 - (void)awakeFromNib
 {
@@ -125,21 +125,21 @@
     
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Presence" inManagedObjectContext:[SSManagedObject mainQueueContext]];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Buddy" inManagedObjectContext:[SSManagedObject mainQueueContext]];
     [fetchRequest setEntity:entity];
     
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"jid" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"identifier" ascending:YES];
     NSArray *sortDescriptors = @[sortDescriptor];
-    
+
     [fetchRequest setSortDescriptors:sortDescriptors];
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[SSManagedObject mainQueueContext] sectionNameKeyPath:nil cacheName:@"Master"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[SSManagedObject mainQueueContext] sectionNameKeyPath:nil cacheName:@"BuddyList"];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     
@@ -216,8 +216,9 @@
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    Presence *presence = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = presence.jid;
+    Buddy *buddy = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = buddy.identifier;
+    cell.detailTextLabel.text = buddy.show;
 }
 
 @end

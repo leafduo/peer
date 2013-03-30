@@ -13,10 +13,16 @@
 
 @implementation Buddy
 
-@dynamic jid;
+@dynamic identifier;
 @dynamic show;
 @dynamic status;
 @dynamic sent;
-@dynamic resources;
+@dynamic presences;
+
+- (void)updateStatus {
+    for (Presence *presence in self.presences) {
+        self.show = presence.show;
+    }
+}
 
 @end

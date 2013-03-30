@@ -8,19 +8,20 @@
 
 #import "PRAppDelegate.h"
 
-#import "PRMasterViewController.h"
+#import "PRBuddyListViewController.h"
 
 #import "PRXMPPSession.h"
 #import "DDLog.h"
 #import "DDTTYLogger.h"
 
 @implementation PRAppDelegate
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
 //    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
 //    PRMasterViewController *controller = (PRMasterViewController *)navigationController.topViewController;
-//    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [PRXMPPSession sharedSession].jabberID = @"leafduo@gmail.com";
     [PRXMPPSession sharedSession].password = @"shluvumnbchjqmmk";
     [[PRXMPPSession sharedSession] connect];
@@ -54,7 +55,7 @@
     // Saves changes in the application's managed object context before the application terminates.
     [[SSManagedObject mainQueueContext] save:nil];
 }
-
+//
 #pragma mark - Application's Documents directory
 
 // Returns the URL to the application's Documents directory.

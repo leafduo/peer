@@ -19,7 +19,7 @@
 		9217D6341705747C0021039B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9217D6331705747C0021039B /* Default-568h@2x.png */; };
 		9217D6371705747C0021039B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9217D6351705747C0021039B /* MainStoryboard.storyboard */; };
 		9217D63A1705747C0021039B /* Peer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9217D6381705747C0021039B /* Peer.xcdatamodeld */; };
-		9217D63D1705747C0021039B /* PRMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D63C1705747C0021039B /* PRMasterViewController.m */; };
+		9217D63D1705747C0021039B /* PRBuddyListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D63C1705747C0021039B /* PRBuddyListViewController.m */; };
 		9217D6401705747C0021039B /* PRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D63F1705747C0021039B /* PRDetailViewController.m */; };
 		9217D657170576D50021039B /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D648170576D50021039B /* DDAbstractDatabaseLogger.m */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations"; }; };
 		9217D658170576D50021039B /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D64A170576D50021039B /* DDASLLogger.m */; settings = {COMPILER_FLAGS = "-Wno-deprecated-declarations"; }; };
@@ -77,6 +77,7 @@
 		9276FE6C170719880012A82E /* Buddy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE6B170719880012A82E /* Buddy.m */; };
 		9276FE6F170719890012A82E /* Presence.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE6E170719890012A82E /* Presence.m */; };
 		9276FE72170719890012A82E /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE71170719890012A82E /* Message.m */; };
+		9276FE7C170748A30012A82E /* PRManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE7B170748A30012A82E /* PRManagedObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,8 +97,8 @@
 		9217D6331705747C0021039B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9217D6361705747C0021039B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		9217D6391705747C0021039B /* Peer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Peer.xcdatamodel; sourceTree = "<group>"; };
-		9217D63B1705747C0021039B /* PRMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRMasterViewController.h; sourceTree = "<group>"; };
-		9217D63C1705747C0021039B /* PRMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRMasterViewController.m; sourceTree = "<group>"; };
+		9217D63B1705747C0021039B /* PRBuddyListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRBuddyListViewController.h; sourceTree = "<group>"; };
+		9217D63C1705747C0021039B /* PRBuddyListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRBuddyListViewController.m; sourceTree = "<group>"; };
 		9217D63E1705747C0021039B /* PRDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRDetailViewController.h; sourceTree = "<group>"; };
 		9217D63F1705747C0021039B /* PRDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRDetailViewController.m; sourceTree = "<group>"; };
 		9217D647170576D50021039B /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
@@ -213,6 +214,8 @@
 		9276FE6E170719890012A82E /* Presence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Presence.m; sourceTree = "<group>"; };
 		9276FE70170719890012A82E /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		9276FE71170719890012A82E /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		9276FE7A170748A20012A82E /* PRManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRManagedObject.h; sourceTree = "<group>"; };
+		9276FE7B170748A30012A82E /* PRManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRManagedObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -573,6 +576,8 @@
 		9276FE73170719910012A82E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9276FE7A170748A20012A82E /* PRManagedObject.h */,
+				9276FE7B170748A30012A82E /* PRManagedObject.m */,
 				9217D6381705747C0021039B /* Peer.xcdatamodeld */,
 				9276FE70170719890012A82E /* Message.h */,
 				9276FE71170719890012A82E /* Message.m */,
@@ -597,8 +602,8 @@
 			isa = PBXGroup;
 			children = (
 				9217D6351705747C0021039B /* MainStoryboard.storyboard */,
-				9217D63B1705747C0021039B /* PRMasterViewController.h */,
-				9217D63C1705747C0021039B /* PRMasterViewController.m */,
+				9217D63B1705747C0021039B /* PRBuddyListViewController.h */,
+				9217D63C1705747C0021039B /* PRBuddyListViewController.m */,
 				9217D63E1705747C0021039B /* PRDetailViewController.h */,
 				9217D63F1705747C0021039B /* PRDetailViewController.m */,
 			);
@@ -679,7 +684,7 @@
 				9217D62A1705747C0021039B /* main.m in Sources */,
 				9217D62E1705747C0021039B /* PRAppDelegate.m in Sources */,
 				9217D63A1705747C0021039B /* Peer.xcdatamodeld in Sources */,
-				9217D63D1705747C0021039B /* PRMasterViewController.m in Sources */,
+				9217D63D1705747C0021039B /* PRBuddyListViewController.m in Sources */,
 				9217D6401705747C0021039B /* PRDetailViewController.m in Sources */,
 				9217D657170576D50021039B /* DDAbstractDatabaseLogger.m in Sources */,
 				9217D658170576D50021039B /* DDASLLogger.m in Sources */,
@@ -729,6 +734,7 @@
 				9276FE6C170719880012A82E /* Buddy.m in Sources */,
 				9276FE6F170719890012A82E /* Presence.m in Sources */,
 				9276FE72170719890012A82E /* Message.m in Sources */,
+				9276FE7C170748A30012A82E /* PRManagedObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@
 @class Buddy;
 @class XMPPMessage;
 
-@interface Message : SSManagedObject
+@interface Message : PRManagedObject
 
 @property (nonatomic, retain) NSString * body;
 @property (nonatomic) NSTimeInterval createdAt;

@@ -11,13 +11,16 @@
 
 @class Message, Presence;
 
-@interface Buddy : SSManagedObject
+@interface Buddy : PRManagedObject
 
-@property (nonatomic, retain) NSString * jid;
+@property (nonatomic, copy) NSString * identifier;
 @property (nonatomic, retain) NSString * show;
 @property (nonatomic, retain) NSString * status;
 @property (nonatomic, retain) NSSet *sent;
-@property (nonatomic, retain) NSSet *resources;
+@property (nonatomic, retain) NSSet *presences;
+
+- (void)updateStatus;
+
 @end
 
 @interface Buddy (CoreDataGeneratedAccessors)
@@ -27,9 +30,9 @@
 - (void)addSent:(NSSet *)values;
 - (void)removeSent:(NSSet *)values;
 
-- (void)addResourcesObject:(Presence *)value;
-- (void)removeResourcesObject:(Presence *)value;
-- (void)addResources:(NSSet *)values;
-- (void)removeResources:(NSSet *)values;
+- (void)addPresencesObject:(Presence *)value;
+- (void)removePresencesObject:(Presence *)value;
+- (void)addPresences:(NSSet *)values;
+- (void)removePresences:(NSSet *)values;
 
 @end

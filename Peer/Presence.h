@@ -12,9 +12,9 @@
 @class Buddy;
 @class XMPPPresence;
 
-@interface Presence : SSManagedObject
+@interface Presence : PRManagedObject
 
-@property (nonatomic, retain) NSString * jid;
+@property (nonatomic, copy) NSString * identifier;
 @property (nonatomic, retain) NSString * show;
 @property (nonatomic, retain) NSString * status;
 @property (nonatomic, retain) Buddy *owner;
