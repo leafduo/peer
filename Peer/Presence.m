@@ -20,7 +20,7 @@
 + (instancetype)objectWithXMLRepresentation:(XMPPPresence *)xmppPresence {
     Presence *presence = [Presence objectWithIdentifier:xmppPresence.fromStr];
     presence.identifier = xmppPresence.fromStr;
-    presence.show = xmppPresence.show;
+    presence.show = xmppPresence.show ? xmppPresence.show : @"chat";
     presence.status = xmppPresence.status;
 
     Buddy *associateBuddy = [Buddy objectWithIdentifier:xmppPresence.from.bare];
