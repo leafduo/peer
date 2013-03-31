@@ -15,12 +15,22 @@
 @dynamic body;
 @dynamic createdAt;
 @dynamic sender;
+@dynamic receiver;
 
 + (instancetype)objectWithXMLRepresentation:(XMPPMessage *)xmppMessage {
+    NSString *bodyString = [[xmppMessage elementForName:@"body"] stringValue];
+    if (!bodyString) {
+        return nil;
+    }
+    
     Message *message = [[Message alloc] init];
-    message.body = [[xmppMessage elementForName:@"body"] stringValue];
-    XMPPJID *senderJID = [[xmppMessage from] bareJID];
-    // TODO: link message & resource
+    message.body = bodyString;
+    
+    Buddy *sender = [Buddy existingObjectWithIdentifier:[[xmppMessage from] bare]];
+    [sender addSentObject:message];
+
+    Buddy *receiver = [Buddy existingObjectWithIdentifier:[[xmppMessage to] bare]];
+    [receiver addReceivedObject:message];
     return message;
 }
 

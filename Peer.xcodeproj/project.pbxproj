@@ -74,7 +74,7 @@
 		9217D7EE1705C7AD0021039B /* SSRemoteManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7E21705C7AD0021039B /* SSRemoteManagedObject.m */; };
 		9217D7EF1705C7AD0021039B /* SSDataKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9217D7E31705C7AD0021039B /* SSDataKit.podspec */; };
 		9217D7F21705C9470021039B /* PRXMPPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7F11705C9470021039B /* PRXMPPSession.m */; };
-		9276FE6C170719880012A82E /* Buddy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE6B170719880012A82E /* Buddy.m */; };
+		9260CBD21708274F00D73157 /* Buddy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9260CBD11708274F00D73157 /* Buddy.m */; };
 		9276FE6F170719890012A82E /* Presence.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE6E170719890012A82E /* Presence.m */; };
 		9276FE72170719890012A82E /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE71170719890012A82E /* Message.m */; };
 		9276FE7C170748A30012A82E /* PRManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE7B170748A30012A82E /* PRManagedObject.m */; };
@@ -208,8 +208,8 @@
 		9217D7E31705C7AD0021039B /* SSDataKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SSDataKit.podspec; sourceTree = "<group>"; };
 		9217D7F01705C9470021039B /* PRXMPPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRXMPPSession.h; sourceTree = "<group>"; };
 		9217D7F11705C9470021039B /* PRXMPPSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRXMPPSession.m; sourceTree = "<group>"; };
-		9276FE6A170719880012A82E /* Buddy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buddy.h; sourceTree = "<group>"; };
-		9276FE6B170719880012A82E /* Buddy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buddy.m; sourceTree = "<group>"; };
+		9260CBD01708274F00D73157 /* Buddy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buddy.h; sourceTree = "<group>"; };
+		9260CBD11708274F00D73157 /* Buddy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buddy.m; sourceTree = "<group>"; };
 		9276FE6D170719890012A82E /* Presence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presence.h; sourceTree = "<group>"; };
 		9276FE6E170719890012A82E /* Presence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Presence.m; sourceTree = "<group>"; };
 		9276FE70170719890012A82E /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
@@ -578,13 +578,13 @@
 			children = (
 				9276FE7A170748A20012A82E /* PRManagedObject.h */,
 				9276FE7B170748A30012A82E /* PRManagedObject.m */,
+				9260CBD01708274F00D73157 /* Buddy.h */,
+				9260CBD11708274F00D73157 /* Buddy.m */,
 				9217D6381705747C0021039B /* Peer.xcdatamodeld */,
 				9276FE70170719890012A82E /* Message.h */,
 				9276FE71170719890012A82E /* Message.m */,
 				9276FE6D170719890012A82E /* Presence.h */,
 				9276FE6E170719890012A82E /* Presence.m */,
-				9276FE6A170719880012A82E /* Buddy.h */,
-				9276FE6B170719880012A82E /* Buddy.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -730,11 +730,11 @@
 				9217D7ED1705C7AD0021039B /* SSManagedViewController.m in Sources */,
 				9217D7EE1705C7AD0021039B /* SSRemoteManagedObject.m in Sources */,
 				9217D7F21705C9470021039B /* PRXMPPSession.m in Sources */,
-				9276FE6C170719880012A82E /* Buddy.m in Sources */,
 				9276FE6F170719890012A82E /* Presence.m in Sources */,
 				9276FE72170719890012A82E /* Message.m in Sources */,
 				9276FE7C170748A30012A82E /* PRManagedObject.m in Sources */,
 				9216862417075FEE00693493 /* PRChatViewController.m in Sources */,
+				9260CBD21708274F00D73157 /* Buddy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

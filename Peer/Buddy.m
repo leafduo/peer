@@ -2,7 +2,7 @@
 //  Buddy.m
 //  Peer
 //
-//  Created by leafduo on 3/30/13.
+//  Created by leafduo on 3/31/13.
 //  Copyright (c) 2013 leafduo.com. All rights reserved.
 //
 
@@ -16,8 +16,9 @@
 @dynamic identifier;
 @dynamic show;
 @dynamic status;
-@dynamic sent;
 @dynamic presences;
+@dynamic received;
+@dynamic sent;
 
 - (void)updateStatus {
     for (Presence *presence in self.presences) {

@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSString * body;
 @property (nonatomic) NSTimeInterval createdAt;
 @property (nonatomic, retain) Buddy *sender;
+@property (nonatomic, retain) Buddy *receiver;
 
 + (instancetype)objectWithXMLRepresentation:(XMPPMessage *)xmppMessage;
 

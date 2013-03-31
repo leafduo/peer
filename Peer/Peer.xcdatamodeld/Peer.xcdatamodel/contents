@@ -5,17 +5,13 @@
         <attribute name="show" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="presences" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Presence" inverseName="owner" inverseEntity="Presence" syncable="YES"/>
+        <relationship name="received" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="receiver" inverseEntity="Message" syncable="YES"/>
         <relationship name="sent" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Message" inverseName="sender" inverseEntity="Message" syncable="YES"/>
-    </entity>
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date">
-            <userInfo/>
-        </attribute>
-        <userInfo/>
     </entity>
     <entity name="Message" representedClassName="Message" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="receiver" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Buddy" inverseName="received" inverseEntity="Buddy" syncable="YES"/>
         <relationship name="sender" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Buddy" inverseName="sent" inverseEntity="Buddy" syncable="YES"/>
     </entity>
     <entity name="Presence" representedClassName="Presence" syncable="YES">
@@ -25,9 +21,8 @@
         <relationship name="owner" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Buddy" inverseName="presences" inverseEntity="Buddy" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Buddy" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Event" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Message" positionX="0" positionY="0" width="0" height="0"/>
-        <element name="Presence" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Buddy" positionX="0" positionY="0" width="128" height="135"/>
+        <element name="Message" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="Presence" positionX="0" positionY="0" width="128" height="105"/>
     </elements>
 </model>
