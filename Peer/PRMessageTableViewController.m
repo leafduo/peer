@@ -65,13 +65,13 @@
     // Edit the entity name as appropriate.
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Message" inManagedObjectContext:[SSManagedObject mainQueueContext]];
     [fetchRequest setEntity:entity];
-    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"sender.identifier = %@", self.buddy.identifier];
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"sender.identifier = %@ OR receiver.identifier = %@", self.buddy.identifier, self.buddy.identifier];
 
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
 
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"createdAt" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"createdAt" ascending:YES];
     NSArray *sortDescriptors = @[sortDescriptor];
 
     [fetchRequest setSortDescriptors:sortDescriptors];

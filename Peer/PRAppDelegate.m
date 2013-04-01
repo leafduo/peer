@@ -23,7 +23,7 @@
 //    PRMasterViewController *controller = (PRMasterViewController *)navigationController.topViewController;
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     [PRXMPPSession sharedSession].jabberID = @"leafduo@gmail.com";
-    [PRXMPPSession sharedSession].password = @"shluvumnbchjqmmk";
+    [PRXMPPSession sharedSession].password = @"shluvumnbchjqmmkk";
     [[PRXMPPSession sharedSession] connect];
     return YES;
 }

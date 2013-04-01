@@ -79,7 +79,16 @@ static PRXMPPSession *_sharedSession;
     [self goOnline];
 }
 
+- (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(DDXMLElement *)error {
+    // TODO: check for more errors
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"XMPPStreamNotAuthorizedNotificationName" object:nil];
+}
+
 - (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message {
+    [Message objectWithXMLRepresentation:message];
+}
+
+- (void)xmppStream:(XMPPStream *)sender didSendMessage:(XMPPMessage *)message {
     [Message objectWithXMLRepresentation:message];
 }
 
