@@ -12,6 +12,7 @@
 
 @implementation Message
 
+@dynamic identifier;
 @dynamic body;
 @dynamic createdAt;
 @dynamic sender;
@@ -25,8 +26,12 @@
     
     Message *message = [[Message alloc] init];
     message.body = bodyString;
+    message.identifier = [[NSUUID UUID] UUIDString];
+    message.createdAt = [NSDate timeIntervalSinceReferenceDate];
+    
     
     Buddy *sender = [Buddy existingObjectWithIdentifier:[[xmppMessage from] bare]];
+    NSLog(@"sender: %@", sender);
     [sender addSentObject:message];
 
     Buddy *receiver = [Buddy existingObjectWithIdentifier:[[xmppMessage to] bare]];

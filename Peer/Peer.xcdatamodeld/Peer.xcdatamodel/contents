@@ -11,6 +11,7 @@
     <entity name="Message" representedClassName="Message" syncable="YES">
         <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="receiver" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Buddy" inverseName="received" inverseEntity="Buddy" syncable="YES"/>
         <relationship name="sender" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Buddy" inverseName="sent" inverseEntity="Buddy" syncable="YES"/>
     </entity>
@@ -22,7 +23,7 @@
     </entity>
     <elements>
         <element name="Buddy" positionX="0" positionY="0" width="128" height="135"/>
-        <element name="Message" positionX="0" positionY="0" width="128" height="105"/>
+        <element name="Message" positionX="0" positionY="0" width="128" height="120"/>
         <element name="Presence" positionX="0" positionY="0" width="128" height="105"/>
     </elements>
 </model>

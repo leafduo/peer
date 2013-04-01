@@ -18,11 +18,18 @@
 
 @implementation PRChatViewController
 
-#pragma mark - UIView methods
+#pragma mark - UIViewController
 
 - (void)viewDidLoad {
     self.title = self.buddy.identifier;
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"embedMessageList"]) {
+        [[segue destinationViewController] setBuddy:self.buddy];
+    }
+}
+
 
 #pragma mark - UITextViewDelegate methods
 

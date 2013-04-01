@@ -74,6 +74,7 @@
 		9217D7EE1705C7AD0021039B /* SSRemoteManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7E21705C7AD0021039B /* SSRemoteManagedObject.m */; };
 		9217D7EF1705C7AD0021039B /* SSDataKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9217D7E31705C7AD0021039B /* SSDataKit.podspec */; };
 		9217D7F21705C9470021039B /* PRXMPPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 9217D7F11705C9470021039B /* PRXMPPSession.m */; };
+		921A3E6F1709C601007125EF /* PRMessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 921A3E6E1709C600007125EF /* PRMessageTableViewController.m */; };
 		9260CBD21708274F00D73157 /* Buddy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9260CBD11708274F00D73157 /* Buddy.m */; };
 		9276FE6F170719890012A82E /* Presence.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE6E170719890012A82E /* Presence.m */; };
 		9276FE72170719890012A82E /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE71170719890012A82E /* Message.m */; };
@@ -208,6 +209,8 @@
 		9217D7E31705C7AD0021039B /* SSDataKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SSDataKit.podspec; sourceTree = "<group>"; };
 		9217D7F01705C9470021039B /* PRXMPPSession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRXMPPSession.h; sourceTree = "<group>"; };
 		9217D7F11705C9470021039B /* PRXMPPSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRXMPPSession.m; sourceTree = "<group>"; };
+		921A3E6D1709C600007125EF /* PRMessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRMessageTableViewController.h; sourceTree = "<group>"; };
+		921A3E6E1709C600007125EF /* PRMessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRMessageTableViewController.m; sourceTree = "<group>"; };
 		9260CBD01708274F00D73157 /* Buddy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Buddy.h; sourceTree = "<group>"; };
 		9260CBD11708274F00D73157 /* Buddy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Buddy.m; sourceTree = "<group>"; };
 		9276FE6D170719890012A82E /* Presence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Presence.h; sourceTree = "<group>"; };
@@ -606,6 +609,8 @@
 				9217D63C1705747C0021039B /* PRBuddyListViewController.m */,
 				9216862217075FEE00693493 /* PRChatViewController.h */,
 				9216862317075FEE00693493 /* PRChatViewController.m */,
+				921A3E6D1709C600007125EF /* PRMessageTableViewController.h */,
+				921A3E6E1709C600007125EF /* PRMessageTableViewController.m */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -735,6 +740,7 @@
 				9276FE7C170748A30012A82E /* PRManagedObject.m in Sources */,
 				9216862417075FEE00693493 /* PRChatViewController.m in Sources */,
 				9260CBD21708274F00D73157 /* Buddy.m in Sources */,
+				921A3E6F1709C601007125EF /* PRMessageTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

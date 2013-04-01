@@ -14,6 +14,7 @@
 
 @interface Message : PRManagedObject
 
+@property (nonatomic, copy) NSString *identifier;
 @property (nonatomic, retain) NSString * body;
 @property (nonatomic) NSTimeInterval createdAt;
 @property (nonatomic, retain) Buddy *sender;

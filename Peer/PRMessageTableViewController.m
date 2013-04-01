@@ -1,23 +1,22 @@
 //
-//  PRBuddyListViewController.m
+//  PRMessageTableViewController.m
 //  Peer
 //
-//  Created by leafduo on 3/29/13.
+//  Created by leafduo on 4/1/13.
 //  Copyright (c) 2013 leafduo.com. All rights reserved.
 //
 
-#import "PRBuddyListViewController.h"
-#import "PRChatViewController.h"
-
+#import "PRMessageTableViewController.h"
+#import "Message.h"
 #import "Buddy.h"
 
-@interface PRBuddyListViewController ()
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@interface PRMessageTableViewController ()
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+
 @end
 
-@implementation PRBuddyListViewController
+@implementation PRMessageTableViewController
 
 #pragma mark - NSObject
 
@@ -25,27 +24,6 @@
     if (self.fetchedResultsController) {
         self.fetchedResultsController.delegate = nil;
     }
-}
-
-- (void)awakeFromNib
-{
-    [super awakeFromNib];
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table View
@@ -63,56 +41,55 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ContactCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MessageCell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
     return cell;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    if ([[segue identifier] isEqualToString:@"beginChat"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Buddy *buddy = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        [[segue destinationViewController] setBuddy:buddy];
-    }
+    Message *message = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.textLabel.text = message.body;
 }
 
-#pragma mark - Fetched results controller
+
+#pragma mark - NSFetchedResultsController
 
 - (NSFetchedResultsController *)fetchedResultsController
 {
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
     }
-    
+
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Buddy" inManagedObjectContext:[SSManagedObject mainQueueContext]];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Message" inManagedObjectContext:[SSManagedObject mainQueueContext]];
     [fetchRequest setEntity:entity];
-    
+    fetchRequest.predicate = [NSPredicate predicateWithFormat:@"sender.identifier = %@", self.buddy.identifier];
+
     // Set the batch size to a suitable number.
     [fetchRequest setFetchBatchSize:20];
-    
+
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"identifier" ascending:YES];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"createdAt" ascending:NO];
     NSArray *sortDescriptors = @[sortDescriptor];
 
     [fetchRequest setSortDescriptors:sortDescriptors];
-    
+
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[SSManagedObject mainQueueContext] sectionNameKeyPath:nil cacheName:@"BuddyList"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:[SSManagedObject mainQueueContext] sectionNameKeyPath:nil cacheName:@"MessageList"];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
-    
+
 	NSError *error = nil;
 	if (![self.fetchedResultsController performFetch:&error]) {
-	     // Replace this implementation with code to handle the error appropriately.
-	     // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
 	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 	    abort();
 	}
-    
+
     return _fetchedResultsController;
 }    
 
@@ -140,20 +117,20 @@
       newIndexPath:(NSIndexPath *)newIndexPath
 {
     UITableView *tableView = self.tableView;
-    
+
     switch(type) {
         case NSFetchedResultsChangeInsert:
             [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
-            
+
         case NSFetchedResultsChangeDelete:
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
             break;
-            
+
         case NSFetchedResultsChangeUpdate:
             [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
-            
+
         case NSFetchedResultsChangeMove:
             [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
             [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
@@ -164,23 +141,6 @@
 - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {
     [self.tableView endUpdates];
-}
-
-/*
-// Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed. 
- 
- - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
-{
-    // In the simplest, most efficient, case, reload the table view.
-    [self.tableView reloadData];
-}
- */
-
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
-{
-    Buddy *buddy = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = buddy.identifier;
-    cell.detailTextLabel.text = buddy.show;
 }
 
 @end
