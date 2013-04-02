@@ -10,10 +10,13 @@
 #import "XMPP.h"
 #import "Message.h"
 #import "Presence.h"
+#import "SSKeychain.h"
 
 @implementation PRXMPPSession {
     XMPPStream *_stream;
 }
+
+@synthesize jabberID = _jabberID;
 
 static PRXMPPSession *_sharedSession;
 
@@ -31,6 +34,13 @@ static PRXMPPSession *_sharedSession;
     if (self) {
         _stream = [[XMPPStream alloc] init];
         [_stream addDelegate:self delegateQueue:dispatch_get_main_queue()];
+
+        NSArray *accounts = [SSKeychain accountsForService:@"XMPP"];
+        if (accounts) {
+            NSDictionary *account = accounts[0];
+            self.jabberID = account[@"acct"];
+            self.password = [SSKeychain passwordForService:@"XMPP" account:self.jabberID];
+        }
     }
     return self;
 }
@@ -45,6 +55,9 @@ static PRXMPPSession *_sharedSession;
 #pragma mark - Actions
 
 - (void)connect {
+    if ([_stream isConnected]) {
+        [_stream disconnect];
+    }
     [_stream connect:nil];
 }
 

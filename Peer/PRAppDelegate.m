@@ -9,7 +9,6 @@
 #import "PRAppDelegate.h"
 
 #import "PRBuddyListViewController.h"
-
 #import "PRXMPPSession.h"
 #import "DDLog.h"
 #import "DDTTYLogger.h"
@@ -22,8 +21,6 @@
 //    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
 //    PRMasterViewController *controller = (PRMasterViewController *)navigationController.topViewController;
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    [PRXMPPSession sharedSession].jabberID = @"leafduo@gmail.com";
-    [PRXMPPSession sharedSession].password = @"shluvumnbchjqmmkk";
     [[PRXMPPSession sharedSession] connect];
     return YES;
 }
