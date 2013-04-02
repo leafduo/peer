@@ -4,3 +4,6 @@
 [submodule "Vendor/SSDataKit"]
 	path = Vendor/SSDataKit
 	url = git://github.com/soffes/ssdatakit.git
+[submodule "Vendor/SSKeychain"]
+	path = Vendor/SSKeychain
+	url = git://github.com/soffes/sskeychain.git

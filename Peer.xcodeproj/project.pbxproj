@@ -81,6 +81,8 @@
 		9276FE72170719890012A82E /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE71170719890012A82E /* Message.m */; };
 		9276FE7C170748A30012A82E /* PRManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE7B170748A30012A82E /* PRManagedObject.m */; };
 		92A64B8B170A77D400D3A1A1 /* PRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A64B8A170A77D400D3A1A1 /* PRLoginViewController.m */; };
+		92A64BBB170AEB4200D3A1A1 /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A64BB8170AEB4200D3A1A1 /* SSKeychain.m */; };
+		92A64BBC170AEB4200D3A1A1 /* SSKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A64BBA170AEB4200D3A1A1 /* SSKeychainQuery.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -225,6 +227,10 @@
 		9276FE7B170748A30012A82E /* PRManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRManagedObject.m; sourceTree = "<group>"; };
 		92A64B89170A77D400D3A1A1 /* PRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRLoginViewController.h; sourceTree = "<group>"; };
 		92A64B8A170A77D400D3A1A1 /* PRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRLoginViewController.m; sourceTree = "<group>"; };
+		92A64BB7170AEB4200D3A1A1 /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		92A64BB8170AEB4200D3A1A1 /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
+		92A64BB9170AEB4200D3A1A1 /* SSKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychainQuery.h; sourceTree = "<group>"; };
+		92A64BBA170AEB4200D3A1A1 /* SSKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychainQuery.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,9 +238,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9217D6681705784C0021039B /* Security.framework in Frameworks */,
 				9217D6D6170579BC0021039B /* libresolv.dylib in Frameworks */,
 				9217D67F170579530021039B /* libidn.a in Frameworks */,
-				9217D6681705784C0021039B /* Security.framework in Frameworks */,
 				9217D6691705784C0021039B /* CFNetwork.framework in Frameworks */,
 				9217D61C1705747C0021039B /* UIKit.framework in Frameworks */,
 				9217D61E1705747C0021039B /* Foundation.framework in Frameworks */,
@@ -339,6 +345,7 @@
 		9217D65F170576E00021039B /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				92A64BB6170AEB4200D3A1A1 /* SSKeychain */,
 				9217D7CC1705C7AD0021039B /* SSDataKit */,
 				9217D6D3170579910021039B /* XMPPFramework */,
 				9217D67E1705792C0021039B /* libidn */,
@@ -625,6 +632,18 @@
 			name = "View Controller";
 			sourceTree = "<group>";
 		};
+		92A64BB6170AEB4200D3A1A1 /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				92A64BB7170AEB4200D3A1A1 /* SSKeychain.h */,
+				92A64BB8170AEB4200D3A1A1 /* SSKeychain.m */,
+				92A64BB9170AEB4200D3A1A1 /* SSKeychainQuery.h */,
+				92A64BBA170AEB4200D3A1A1 /* SSKeychainQuery.m */,
+			);
+			name = SSKeychain;
+			path = Vendor/SSKeychain/SSKeychain;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -753,6 +772,8 @@
 				921A3E6F1709C601007125EF /* PRMessageTableViewController.m in Sources */,
 				92540829170A088F00BA9810 /* PRNavigationController.m in Sources */,
 				92A64B8B170A77D400D3A1A1 /* PRLoginViewController.m in Sources */,
+				92A64BBB170AEB4200D3A1A1 /* SSKeychain.m in Sources */,
+				92A64BBC170AEB4200D3A1A1 /* SSKeychainQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
