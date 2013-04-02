@@ -7,7 +7,7 @@
         <!--Navigation Controller-->
         <scene sceneID="11">
             <objects>
-                <navigationController id="3" customClass="PRNavigationController" sceneMemberID="viewController">
+                <navigationController useStoryboardIdentifierAsRestorationIdentifier="YES" id="3" customClass="PRNavigationController" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="4">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -23,7 +23,7 @@
         <!--Navigation Controller-->
         <scene sceneID="vbF-J2-9Fj">
             <objects>
-                <navigationController definesPresentationContext="YES" id="41z-1q-UMA" sceneMemberID="viewController">
+                <navigationController definesPresentationContext="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="41z-1q-UMA" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7zO-GT-lX1">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="13" y="768"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller - Login-->
         <scene sceneID="JjK-Kz-7z7">
             <objects>
-                <viewController id="uoD-D7-trq" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="uoD-D7-trq" customClass="PRLoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rig-Zn-I7f">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -54,9 +54,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1I-6s-vpu">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="login:" destination="uoD-D7-trq" eventType="touchUpInside" id="pjH-tc-vvY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="p1I-6s-vpu" firstAttribute="leading" secondItem="rig-Zn-I7f" secondAttribute="leading" constant="112" id="1zO-wx-7nN"/>
+                            <constraint firstAttribute="bottom" secondItem="p1I-6s-vpu" secondAttribute="bottom" constant="167" id="3LV-lK-TCD"/>
                             <constraint firstItem="9oE-dt-3eU" firstAttribute="top" secondItem="rig-Zn-I7f" secondAttribute="top" constant="216" id="IKF-Dd-wZr"/>
                             <constraint firstItem="Brl-pn-DZ3" firstAttribute="top" secondItem="rig-Zn-I7f" secondAttribute="top" constant="153" id="VwL-Hj-8eN"/>
                             <constraint firstItem="9oE-dt-3eU" firstAttribute="leading" secondItem="Brl-pn-DZ3" secondAttribute="leading" type="default" id="j0p-aI-pOI"/>
@@ -64,16 +79,21 @@
                             <constraint firstItem="Brl-pn-DZ3" firstAttribute="leading" secondItem="rig-Zn-I7f" secondAttribute="leading" constant="94" id="zjP-yq-Qd4"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GGY-Dw-QBz"/>
+                    <navigationItem key="navigationItem" title="Login" id="GGY-Dw-QBz"/>
+                    <connections>
+                        <outlet property="loginButton" destination="p1I-6s-vpu" id="fN1-XJ-uNv"/>
+                        <outlet property="passwordField" destination="9oE-dt-3eU" id="I9s-GZ-4bv"/>
+                        <outlet property="usernameField" destination="Brl-pn-DZ3" id="kAU-0m-29f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="StP-qG-57k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="527" y="768"/>
+            <point key="canvasLocation" x="374" y="768"/>
         </scene>
-        <!--Buddy List View Controller - Master-->
+        <!--Buddy List View Controller - Buddies-->
         <scene sceneID="18">
             <objects>
-                <tableViewController storyboardIdentifier="" title="Master" id="12" customClass="PRBuddyListViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="" useStoryboardIdentifierAsRestorationIdentifier="YES" id="12" customClass="PRBuddyListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="13">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,17 +142,17 @@
         <!--Message Table View Controller-->
         <scene sceneID="ypw-9Z-CDe">
             <objects>
-                <tableViewController id="oIs-B8-E7p" customClass="PRMessageTableViewController" sceneMemberID="viewController">
+                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="oIs-B8-E7p" customClass="PRMessageTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="3zC-hL-80p">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="388"/>
+                        <rect key="frame" x="0.0" y="0.0" width="322" height="388"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MessageCell" textLabel="vcq-1a-0IY" style="IBUITableViewCellStyleDefault" id="AlO-Rt-7fv">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="322" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="322" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vcq-1a-0IY">
@@ -153,12 +173,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MQ-hb-xbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1247" y="-143"/>
+            <point key="canvasLocation" x="1247" y="147"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="8nJ-s0-M30">
             <objects>
-                <viewController id="1g5-j4-d35" customClass="PRChatViewController" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="1g5-j4-d35" customClass="PRChatViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KaB-tt-uTm">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -208,6 +228,14 @@
         </class>
         <class className="PRChatViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PRChatViewController.h"/>
+        </class>
+        <class className="PRLoginViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PRLoginViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
+            </relationships>
         </class>
         <class className="PRMessageTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PRMessageTableViewController.h"/>

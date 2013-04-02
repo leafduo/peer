@@ -80,6 +80,7 @@
 		9276FE6F170719890012A82E /* Presence.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE6E170719890012A82E /* Presence.m */; };
 		9276FE72170719890012A82E /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE71170719890012A82E /* Message.m */; };
 		9276FE7C170748A30012A82E /* PRManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 9276FE7B170748A30012A82E /* PRManagedObject.m */; };
+		92A64B8B170A77D400D3A1A1 /* PRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A64B8A170A77D400D3A1A1 /* PRLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -222,6 +223,8 @@
 		9276FE71170719890012A82E /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
 		9276FE7A170748A20012A82E /* PRManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRManagedObject.h; sourceTree = "<group>"; };
 		9276FE7B170748A30012A82E /* PRManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRManagedObject.m; sourceTree = "<group>"; };
+		92A64B89170A77D400D3A1A1 /* PRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRLoginViewController.h; sourceTree = "<group>"; };
+		92A64B8A170A77D400D3A1A1 /* PRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -608,6 +611,8 @@
 			isa = PBXGroup;
 			children = (
 				9217D6351705747C0021039B /* MainStoryboard.storyboard */,
+				92A64B89170A77D400D3A1A1 /* PRLoginViewController.h */,
+				92A64B8A170A77D400D3A1A1 /* PRLoginViewController.m */,
 				92540827170A088F00BA9810 /* PRNavigationController.h */,
 				92540828170A088F00BA9810 /* PRNavigationController.m */,
 				9217D63B1705747C0021039B /* PRBuddyListViewController.h */,
@@ -747,6 +752,7 @@
 				9260CBD21708274F00D73157 /* Buddy.m in Sources */,
 				921A3E6F1709C601007125EF /* PRMessageTableViewController.m in Sources */,
 				92540829170A088F00BA9810 /* PRNavigationController.m in Sources */,
+				92A64B8B170A77D400D3A1A1 /* PRLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
