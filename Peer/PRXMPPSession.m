@@ -55,6 +55,10 @@ static PRXMPPSession *_sharedSession;
 #pragma mark - Actions
 
 - (void)connect {
+    if (!self.jabberID) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"XMPPStreamNotAuthorizedNotificationName" object:nil];
+        return;
+    }
     if ([_stream isConnected]) {
         [_stream disconnect];
     }
@@ -91,6 +95,11 @@ static PRXMPPSession *_sharedSession;
 - (void)xmppStreamDidAuthenticate:(XMPPStream *)sender {
     [self goOnline];
 }
+
+- (void)xmppStream:(XMPPStream *)sender socketDidConnect:(GCDAsyncSocket *)socket {
+
+}
+
 
 - (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(DDXMLElement *)error {
     // TODO: check for more errors

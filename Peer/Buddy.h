@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSString * show;
 @property (nonatomic, retain) NSString * status;
 @property (nonatomic, retain) NSSet *presences;
+@property (nonatomic, assign) NSTimeInterval lastTalkDate;
 @property (nonatomic, retain) NSSet *received;
 @property (nonatomic, retain) NSSet *sent;
 

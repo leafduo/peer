@@ -19,6 +19,7 @@
 @dynamic presences;
 @dynamic received;
 @dynamic sent;
+@dynamic lastTalkDate;
 
 - (void)updateStatus {
     for (Presence *presence in self.presences) {

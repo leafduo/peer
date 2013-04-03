@@ -8,7 +8,7 @@
 
 #import "PRBuddyListViewController.h"
 #import "PRChatViewController.h"
-
+#import "PRXMPPSession.h"
 #import "Buddy.h"
 
 @interface PRBuddyListViewController ()
@@ -40,6 +40,7 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    [[PRXMPPSession sharedSession] connect];
 }
 
 - (void)didReceiveMemoryWarning
@@ -94,7 +95,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"identifier" ascending:YES];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"lastTalkDate" ascending:NO];
     NSArray *sortDescriptors = @[sortDescriptor];
 
     [fetchRequest setSortDescriptors:sortDescriptors];

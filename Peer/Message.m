@@ -29,12 +29,12 @@
     message.identifier = [[NSUUID UUID] UUIDString];
     message.createdAt = [NSDate timeIntervalSinceReferenceDate];
     
-    
     Buddy *sender = [Buddy existingObjectWithIdentifier:[[xmppMessage from] bare]];
-    NSLog(@"sender: %@", sender);
+    sender.lastTalkDate = [NSDate timeIntervalSinceReferenceDate];
     [sender addSentObject:message];
 
     Buddy *receiver = [Buddy existingObjectWithIdentifier:[[xmppMessage to] bare]];
+    receiver.lastTalkDate = [NSDate timeIntervalSinceReferenceDate];
     [receiver addReceivedObject:message];
     return message;
 }
